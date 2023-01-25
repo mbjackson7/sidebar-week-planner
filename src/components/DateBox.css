@@ -1,0 +1,13 @@
+textarea {
+  width: 100%;
+  resize: vertical;
+  background-color: rgb(32, 40, 75);
+  color: #fff;
+  font-size: large;
+  font-family: "Fira Code", sans-serif;
+}
+
+h3 {
+  color: #fff;
+  font-family: "Fira Code", sans-serif;
+}
