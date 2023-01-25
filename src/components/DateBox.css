@@ -1,13 +1,47 @@
 textarea {
   width: 100%;
+  height: 24px;
   resize: vertical;
   background-color: rgb(32, 40, 75);
   color: #fff;
-  font-size: large;
+  font-size: medium;
   font-family: "Fira Code", sans-serif;
 }
 
-h3 {
+.DataBox {
+  width: 100%;
+}
+
+h5 {
   color: #fff;
   font-family: "Fira Code", sans-serif;
+  text-align: right;
+  padding-bottom: 0%;
+  margin: 0%;
+}
+
+.Task {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0.5rem 0;
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+  background-color: rgb(32, 40, 75);
+  color: rgb(50, 199, 191);
+  font-family: "Fira Code", sans-serif;
+  border-color: rgb(1, 10, 56);
+  border: 1px solid;
+}
+
+.TaskInput {
+  background-color: black;
+  color: #fff;
+}
+
+.TaskInputDone {
+  background-color: black;
+  color: #fff;
+  text-decoration: line-through;
 }
