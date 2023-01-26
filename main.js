@@ -1,4 +1,5 @@
 const { app, BrowserWindow } = require('electron');
+if (require('electron-squirrel-startup')) app.quit();
 
 const createWindow = () => {
   const win = new BrowserWindow({
@@ -6,8 +7,8 @@ const createWindow = () => {
     height: 800,
   });
 
-  //win.loadFile('build/index.html'); // prod
-  win.loadURL('http://localhost:3000'); // dev
+  win.loadFile('build/index.html'); // prod
+  //win.loadURL('http://localhost:3000'); // dev
 };
 
 app.whenReady().then(() => {

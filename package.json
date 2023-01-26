@@ -4,10 +4,13 @@
   "version": "0.1.0",
   "private": true,
   "main": "main.js",
+  "author": "Morgan Jackson",
+  "description": "A simple task planner to run on the side of your screen",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "electron-squirrel-startup": "^1.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -19,7 +22,11 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "desktop": "react-scripts build && electron .",
-    "desktopDev": "electron ."
+    "desktopDev": "electron .",
+    "forge": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "makeFast": "electron-forge make --skip-package"
   },
   "eslintConfig": {
     "extends": [
@@ -40,6 +47,27 @@
     ]
   },
   "devDependencies": {
+    "@electron-forge/cli": "^6.0.4",
+    "@electron-forge/maker-deb": "^6.0.4",
+    "@electron-forge/maker-rpm": "^6.0.4",
+    "@electron-forge/maker-squirrel": "^6.0.4",
+    "@electron-forge/maker-zip": "^6.0.4",
     "electron": "^22.0.3"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-zip"
+        },
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "electron_quick_start"
+          }
+        }
+      ]
+    }
   }
 }
